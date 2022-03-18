@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+           border-collapse: collapse;
+        }
+        td, th {
+            padding: 4px;
+            height: 2px;
+            vertical-align: text-top;
+            text-align: right;
+        }
+        tbody tr:nth-child(odd) td {
+            background-color: #eee;
+        }
+        tbody {
+            border-top: 1px solid;
+            border-bottom:1px solid ;
+        }
+        colgroup {
+            border-left: 1px solid ;
+        }
+        colgroup:first-of-type {
+            border-left: none;
+        }
+        thead tr:first-of-type th {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup></colgroup>
+        <colgroup span="2"></colgroup>
+        <colgroup span="2"></colgroup>
+        <colgroup span="2"></colgroup>
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th colspan="2" scope="colgroup">María</th>
+                <th colspan="2" scope="colgroup">Juan</th>
+                <th colspan="2" scope="colgroup">Periodo</th>
+            </tr>
+            <tr>
+                <td></td>
+                <th scope="col">gastos €/trimestre</th>
+                <th scope="col">ingresos €/trimestre</th>
+                <th scope="col">gastos €/trimestre</th>
+                <th scope="col">ingresos €/trimestre</th>
+                <th scope="col">Trimestre del año</th>
+                <th scope="col">Año</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="6"></th>
+                <td></td>
+                <td>100,00</td>
+                <td></td>
+                <td>90,00</td>
+                <th scope="row">1ºT</th>
+                <th rowspan="4" scope="rowgroup">2021</th>
+            </tr>
+            <tr>
+                
+                <td>10,00</td>
+                <td>100,50</td>
+                <td>1000,00</td>
+                <td>100,00</td>
+                <th scope="row">2ºT</th>
+            </tr>
+            <tr>
+                
+                <td>4,00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th scope="row">3ºT</th>
+            </tr>
+            <tr>
+                
+                <td>1,50</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th scope="row">4ºT</th>
+            </tr>
+            <tr>
+                
+                <td>5,00</td>
+                <td></td>
+                <td></td>
+                <td>5,50</td>
+                <th scope="row">1ºT</th>
+                <th rowspan="2">2022</th>
+            </tr>
+            <tr>
+                
+                <td>100,00</td>
+                <td></td>
+                <td></td>
+                <td>4,50</td>
+                <th scope="row">2ºT</th>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="rowgroup">Totales</th>
+                <th scope="col">120,50</th>
+                <th scope="col">200,50</th>
+                <th scope="col">1000,00</th>
+                <th scope="col">200,00</th>
+                <!--<td></td>-->
+            </tr>
+            <tr>
+                <th scope="rowgroup">Balance</th>
+                <th colspan="2" scope="colgroup">80,00</th>
+                <th colspan="2" scope="colgroup">-800,00</th>
+                 <!--<td></td>-->
+            </tr>
+        </tfoot>
+       
+        
+        
+    </table>
+</body>
+</html>
